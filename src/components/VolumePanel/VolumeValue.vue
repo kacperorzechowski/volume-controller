@@ -1,13 +1,31 @@
 <template>
-  <div></div>
+  <div>
+    <div class="volume-value-text">
+      {{ value }}
+    </div>
+  </div>
 </template>
 
 <script>
   export default {
     name: 'VolumeValue',
+    computed: {
+      value() {
+        return 75;
+      },
+    },
   };
 </script>
 
 <style scoped>
+  @import url('https://fonts.googleapis.com/css?family=Encode+Sans:200');
 
+  .volume-value-text {
+    font-family: 'Encode Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-shadow: 0 0 15px rgba(0,0,0,0.20);
+  }
 </style>

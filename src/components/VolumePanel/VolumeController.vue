@@ -1,10 +1,15 @@
 <template>
-  <div></div>
+  <div>
+    <volume-panel></volume-panel>
+  </div>
 </template>
 
 <script>
+  import VolumePanel from './VolumePanel.vue';
+
   export default {
     name: 'VolumeController',
+    components: { VolumePanel },
   };
 </script>
 
