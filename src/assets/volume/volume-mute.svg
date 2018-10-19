@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="83px" viewBox="0 0 94 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>volume-mute</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-54.4%" y="-61.7%" width="208.8%" height="231.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="TV-System" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02---07---tv---volume---mute" transform="translate(-1755.000000, -895.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Volume" transform="translate(1775.000000, 123.000000)">
+                <g id="volume-mute" filter="url(#filter-1)" transform="translate(0.000000, 788.000000)">
+                    <path d="M28.404,0.758 C27.429,0.206 26.273,0.224 25.314,0.802 C25.268,0.829 25.224,0.861 25.184,0.895 L11.634,12.358 L1,12.358 C0.447,12.358 0,12.805 0,13.358 L0,32.358 C0,32.624 0.105,32.878 0.293,33.065 C0.481,33.252 0.734,33.358 1,33.358 L11.61,33.353 L25.153,45.793 C25.203,45.839 25.257,45.879 25.314,45.913 C25.806,46.21 26.351,46.359 26.896,46.359 C27.413,46.358 27.929,46.225 28.404,45.957 C29.403,45.393 30,44.363 30,43.201 L30,3.514 C30,2.353 29.403,1.323 28.404,0.758 Z M28,43.201 C28,43.632 27.783,44.011 27.421,44.216 C27.266,44.303 26.873,44.471 26.421,44.242 L13,31.913 L13,27.357 C13,26.804 12.553,26.357 12,26.357 C11.447,26.357 11,26.804 11,27.357 L11,31.353 L2,31.357 L2,14.357 L11,14.357 L11,18.357 C11,18.91 11.447,19.357 12,19.357 C12.553,19.357 13,18.91 13,18.357 L13,13.821 L26.405,2.481 C26.866,2.239 27.266,2.411 27.421,2.499 C27.783,2.704 28,3.083 28,3.514 L28,43.201 Z" id="Shape"></path>
+                    <path d="M48.41425,22.00025 L55.70725,14.70725 C56.09825,14.31625 56.09825,13.68425 55.70725,13.29325 C55.31625,12.90225 54.68425,12.90225 54.29325,13.29325 L47.00025,20.58625 L39.70725,13.29325 C39.31625,12.90225 38.68425,12.90225 38.29325,13.29325 C37.90225,13.68425 37.90225,14.31625 38.29325,14.70725 L45.58625,22.00025 L38.29325,29.29325 C37.90225,29.68425 37.90225,30.31625 38.29325,30.70725 C38.48825,30.90225 38.74425,31.00025 39.00025,31.00025 C39.25625,31.00025 39.51225,30.90225 39.70725,30.70725 L47.00025,23.41425 L54.29325,30.70725 C54.48825,30.90225 54.74425,31.00025 55.00025,31.00025 C55.25625,31.00025 55.51225,30.90225 55.70725,30.70725 C56.09825,30.31625 56.09825,29.68425 55.70725,29.29325 L48.41425,22.00025 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
