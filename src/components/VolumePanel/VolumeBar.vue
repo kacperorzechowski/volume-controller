@@ -1,14 +1,24 @@
 <template>
   <div>
     <div class="progressbar">
-      <span style="height: 55%"></span>
+      <span :style="`height: ${heightValue}%`"></span>
     </div>
   </div>
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
+
   export default {
     name: 'VolumeBar',
+    computed: {
+      ...mapGetters([
+        'getLevel',
+      ]),
+      heightValue() {
+        return this.getLevel;
+      },
+    },
   };
 </script>
 
@@ -16,7 +26,7 @@
   .progressbar {
     height: 342.5px;
     width: 12.5px;
-    background: rgba(24,11,30,0.80);
+    background: rgba(24, 11, 30, 0.80);
     border-radius: 18.5px;
     padding: 2px;
     transform: rotate(180deg);

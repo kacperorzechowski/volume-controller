@@ -7,11 +7,16 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
+
   export default {
     name: 'VolumeValue',
     computed: {
+      ...mapGetters([
+        'getLevel',
+      ]),
       value() {
-        return 75;
+        return this.getLevel;
       },
     },
   };

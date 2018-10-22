@@ -4,7 +4,7 @@
       style="position: absolute; top: -35px; left: 18px;"
     ></volume-value>
     <volume-bar></volume-bar>
-    <volume-icon icon="medium"></volume-icon>
+    <volume-icon :icon="$store.getters.getIcon"></volume-icon>
   </div>
 </template>
 

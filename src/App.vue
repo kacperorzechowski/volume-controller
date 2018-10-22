@@ -17,5 +17,6 @@
   body {
     background: url('./assets/stream-placeholder.jpg') no-repeat;
     background-size: cover;
+    overflow-y: hidden;
   }
 </style>
