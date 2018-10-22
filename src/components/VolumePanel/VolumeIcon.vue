@@ -1,6 +1,8 @@
 <template>
   <div>
-    <img class="icon" :src="iconPath"/>
+    <transition name="fade" appear>
+      <img class="icon" :src="iconPath" :key="iconPath"/>
+    </transition>
   </div>
 </template>
 
@@ -40,5 +42,17 @@
     width: 60px;
     height: 48px;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.10);
+  }
+
+  .fade-enter-active {
+    transition: opacity .8s;
+  }
+
+  .fade-leave-to, .fade-leave-active {
+    display: none
+  }
+
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 </style>
