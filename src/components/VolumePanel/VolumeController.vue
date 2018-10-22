@@ -16,6 +16,7 @@
     components: { VolumePanel },
     data: () => ({
       isVisible: false,
+      shouldChangeVolume: false,
       minLevel: 0,
       maxLevel: 100,
       toggleVisible: null,
@@ -30,36 +31,61 @@
       window.addEventListener('keydown', ({ code }) => this.handleKeyDown(code));
     },
     methods: {
+      /**
+       * Handles the key down event.
+       * @param {string} code [ArrowUp|ArrowDown] - arrow up/down key code.
+       */
       handleKeyDown(code) {
         if (code !== 'ArrowUp' && code !== 'ArrowDown') {
           return;
         }
-
-        this.manageVisibility();
         let action = 'increaseVolume';
 
+        if (this.isVisible) {
+          this.shouldChangeVolume = true;
+        }
+
+        this.manageVisibility();
 
         if (code === 'ArrowDown') {
           action = 'decreaseVolume';
         }
 
-        this.changeVolumeLevel(1, action);
+        if (this.shouldChangeVolume) {
+          this.changeVolumeLevel(1, action);
+        }
       },
+      /**
+       * Calls vuex action and changes volume level by given value and action.
+       * @param {int} value - value to increase/decrease volume level by.
+       * @param {string} action [decreaseVolume|increaseVolume]
+       * - vuex action that updates volume level.
+       */
       changeVolumeLevel(value, action) {
         if (this.canChangeVolume(action)) {
           this.$store.dispatch(action, value);
         }
       },
+      /**
+       * Determines if provided action can be executed.
+       * @param {string} action [decreaseVolume|increaseVolume]
+       * - vuex action that updates volume level.
+       * @returns {boolean}
+       */
       canChangeVolume(action) {
         return (this.getLevel < this.maxLevel && this.getLevel > this.minLevel)
           || (this.getLevel === this.maxLevel && action === 'decreaseVolume')
           || (this.getLevel === this.minLevel && action === 'increaseVolume');
       },
+      /**
+       * Handles the volume panel visibility.
+       */
       manageVisibility() {
         clearTimeout(this.toggleVisible);
         this.isVisible = true;
         this.toggleVisible = setTimeout(() => {
           this.isVisible = false;
+          this.shouldChangeVolume = false;
           this.toggleVisible = null;
         }, this.visibleTime * 1000);
       },
