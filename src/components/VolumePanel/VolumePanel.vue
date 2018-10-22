@@ -4,11 +4,12 @@
       style="position: absolute; top: -35px; left: 18px;"
     ></volume-value>
     <volume-bar></volume-bar>
-    <volume-icon :icon="$store.getters.getIcon"></volume-icon>
+    <volume-icon :icon="getIcon"></volume-icon>
   </div>
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
   import VolumeBar from './VolumeBar.vue';
   import VolumeIcon from './VolumeIcon.vue';
   import VolumeValue from './VolumeValue.vue';
@@ -19,6 +20,11 @@
       VolumeValue,
       VolumeIcon,
       VolumeBar,
+    },
+    computed: {
+      ...mapGetters([
+        'getIcon',
+      ]),
     },
   };
 </script>

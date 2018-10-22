@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="progressbar">
-      <span :style="`height: ${heightValue}%`"></span>
+      <span :style="`height: ${getLevel}%`"></span>
     </div>
   </div>
 </template>
@@ -15,9 +15,6 @@
       ...mapGetters([
         'getLevel',
       ]),
-      heightValue() {
-        return this.getLevel;
-      },
     },
   };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="volume-value-text">
-      {{ value }}
+      {{ getLevel }}
     </div>
   </div>
 </template>
@@ -15,9 +15,6 @@
       ...mapGetters([
         'getLevel',
       ]),
-      value() {
-        return this.getLevel;
-      },
     },
   };
 </script>
